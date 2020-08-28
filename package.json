@@ -7,15 +7,17 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "docs:build": "vuepress build docs"
+    "start": "vuepress dev blog",
+    "build": "vuepress build blog",
+    "docs:build": "vuepress build blog"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "^1.5.4",
     "@vuepress/plugin-blog": "^1.9.2",
-    "@vuepress/plugin-nprogress": "^1.5.4"
+    "@vuepress/plugin-nprogress": "^1.5.4",
+    "@vuepress/theme-blog": "^2.3.2",
+    "vuepress": "^1.5.4"
   }
 }

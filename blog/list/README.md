@@ -1,4 +1,6 @@
-<p style="font-size: 5rem; padding: 0px; margin: 0px; transform: rotate(-15deg); display: inline-block; padding-top: 4.6rem; ">🐱</p>
+<Animation>
+  <p style="font-size: 5rem; padding: 0px; margin: 0px; transform: rotate(-15deg); display: inline-block; padding-top: 4.6rem; ">🐱<span style="font-size: 1rem; position: relative; top: -50px; color: darkgray;">Hello ~</span></p>
+</Animation>
 
 # 很高兴见到你
 
@@ -10,6 +12,6 @@
 
 <div style="height: 5rem"></div>
 
-## 今天是 {{ \`${new Date().getMonth()+1}月${new Date().getDate()}日\` }}，运气不错 🌈
+## 今天是 {{ \`${new Date().getMonth()+1}月${new Date().getDate()}日\` }}，随便看看 🌈
 
 <PreviewList :amount="$site.pages.length" />
