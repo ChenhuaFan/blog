@@ -14,10 +14,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@vuepress/plugin-active-header-links": "^1.5.4",
     "@vuepress/plugin-blog": "^1.9.2",
-    "@vuepress/plugin-nprogress": "^1.5.4",
-    "@vuepress/theme-blog": "^2.3.2",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^3.0.2",
     "vuepress": "^1.5.4"
   }
 }

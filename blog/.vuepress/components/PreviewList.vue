@@ -2,7 +2,7 @@
   <div>
     <PostPreview
       :title="$site.pages[index]['title']"
-      :path="$site.pages[index]['regularPath']"
+      :path="$site.pages[index]['path']"
       :tags="$site.pages[index]['frontmatter']['tags']"
       :time="$site.pages[index]['frontmatter']['date']"
     />
