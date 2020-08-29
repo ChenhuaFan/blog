@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: "DirectoryPagination",
+  name: "IndexPost",
 };
 </script>

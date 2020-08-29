@@ -1,17 +1,9 @@
 <template>
-  <Special>
-    <div>{{ $pagination.pages.length }}</div>
-  </Special>
+  <PostPagination />
 </template>
 
 <script>
-import Special from "@theme/layouts/Special.vue";
-
 export default {
   name: "FrontmatterPagination",
-
-  components: {
-    Special,
-  },
 };
 </script>

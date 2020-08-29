@@ -20,7 +20,7 @@
 import Navbar from "@theme/components/Navbar.vue";
 
 export default {
-  name: "Layout",
+  name: "Special",
 
   components: {
     Navbar,

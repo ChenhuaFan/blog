@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import Special from "@theme/layouts/Special.vue";
 import TagList from "@theme/components/TagList.vue";
 
 export default {
@@ -26,7 +25,6 @@ export default {
   },
 
   components: {
-    Special,
     TagList,
   },
 
