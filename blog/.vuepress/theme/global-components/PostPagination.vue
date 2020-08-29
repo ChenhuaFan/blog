@@ -8,7 +8,11 @@
       :nextPath="$pagination.nextLink"
       :prePath="$pagination.prevLink"
     />
-    <PostList :posts="$pagination.pages" />
+    <br />
+    <el-card class="box-card">
+      <PostList :posts="$pagination.pages" />
+    </el-card>
+    <br />
     <Pagination
       :total="totalPagesLength"
       :current="1"
@@ -29,7 +33,7 @@ export default {
   computed: {
     currentTag() {
       const tag = this.$route.path.split("/")[2];
-      if (!tag || tag === "page") return "所有文章";
+      if (!tag || tag === "page" || tag === "post") return "所有文章";
       return tag;
     },
     totalPagesLength() {

@@ -4,8 +4,8 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
-      { text: '分类', link: '/category/' },
       { text: '标签', link: '/tag/' },
+      { text: '全部文章', link: '/post/' },
       {
         text: '语言 / Languages',
         items: [

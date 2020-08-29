@@ -1,7 +1,15 @@
 <template>
   <main class="page">
     <slot name="top" />
-    
+
+    <div class="theme-default-content" style="text-align: center">
+      <Animation>
+        <p
+          style="font-size: 5rem; padding: 0; margin: 0; inline-block; height: 5rem; width: 5rem;"
+        >🐱</p>
+      </Animation>
+    </div>
+
     <Content class="theme-default-content" />
     <PageEdit />
 

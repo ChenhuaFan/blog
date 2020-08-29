@@ -9,12 +9,9 @@
 </template>
 
 <script>
-import PostPreview from "./PostPreview.vue";
 export default {
+  name: "PostList",
   props: ["posts"],
-  components: {
-    PostPreview,
-  },
 };
 </script>
 

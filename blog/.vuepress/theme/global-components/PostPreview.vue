@@ -1,20 +1,22 @@
 <template>
-  <el-card class="box-card" shadow="hover">
-    <h4>
-      <a :href="post.path">{{ post.title }}</a>
-    </h4>
+  <div class="post-preview">
+    <a class="title" :href="post.path">{{ post.title }}</a>
     <div class="info">
-      <p class="displayInline">
-        <i class="el-icon-time"></i>
-        {{ dateFormat("YYYY年mm月dd日", new Date(post.frontmatter.date)) }}
-      </p>
+      <p class="displayInline time">{{ dateFormat("YYYY年mm月dd日", new Date(post.frontmatter.date)) }}</p>
       <ul class="displayInline">
         <li v-for="tag in post.frontmatter.tags">
-          <el-tag type="info">{{ tag }}</el-tag>
+          <el-tag type="info">
+            <el-link
+              type="info"
+              :href="`/tag/${tag}/`"
+              :underline="false"
+              icon="el-icon-collection-tag"
+            >{{ tag }}</el-link>
+          </el-tag>
         </li>
       </ul>
     </div>
-  </el-card>
+  </div>
 </template>
 
 <script>
@@ -49,6 +51,16 @@ export default {
 </script>
 
 <style scoped>
+.post-preview {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.post-preview > a {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
 .info {
   padding: 0.5rem 0;
   font-size: 0.8rem;
@@ -56,6 +68,10 @@ export default {
 
 .displayInline {
   display: inline;
+}
+
+.time {
+  color: rgb(179, 179, 179);
 }
 
 ul {

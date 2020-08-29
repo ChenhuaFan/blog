@@ -1,11 +1,10 @@
 <template>
   <el-pagination
     background
-    layout="prev, pager, next"
+    layout="pager"
     :total="total"
     :current-page="currentIndex"
-    @prev-click="clickPreButton"
-    @next-click="clickNextButton"
+    @current-change="clickPageButton"
   ></el-pagination>
 </template>
 
@@ -14,11 +13,15 @@ export default {
   props: ["total", "nextPath", "prePath"],
 
   computed: {
+    pathArray() {
+      return (divider) => this.$route.path.split(divider);
+    },
     currentIndex() {
-      const curPath = this.$route.path.split("/");
-      const index = Number(curPath[curPath.length - 2]);
-      if (index === NaN) return 1;
-      return index;
+      const curPath = this.pathArray("/"),
+        curPathLen = curPath.length;
+      const index = Number(curPath[curPathLen - 2]);
+      if (index !== NaN && curPath[curPathLen - 3] === "page") return index;
+      return 1;
     },
   },
 
@@ -26,13 +29,15 @@ export default {
     jumpTo(page) {
       this.$router.push(page);
     },
-    clickPreButton() {
-      if (!this.prePath) return;
-      this.jumpTo(this.prePath);
-    },
-    clickNextButton() {
-      if (!this.nextPath) return;
-      this.jumpTo(this.nextPath);
+    clickPageButton(target) {
+      console.log(this.currentIndex, target);
+      if (this.currentIndex === target) return;
+      let curPath = this.pathArray("page");
+      if (target == 1) {
+        this.jumpTo(`${curPath[0]}`);
+      } else {
+        this.jumpTo(`${curPath[0]}page/${target}/`);
+      }
     },
   },
 };
