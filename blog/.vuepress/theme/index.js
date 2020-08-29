@@ -1,5 +1,6 @@
 const path = require('path')
 
+
 // Theme API.
 module.exports = (options, ctx) => {
   const { themeConfig, siteConfig } = ctx
@@ -8,14 +9,14 @@ module.exports = (options, ctx) => {
   const isAlgoliaSearch = (
     themeConfig.algolia
     || Object
-        .keys(siteConfig.locales && themeConfig.locales || {})
-        .some(base => themeConfig.locales[base].algolia)
+      .keys(siteConfig.locales && themeConfig.locales || {})
+      .some(base => themeConfig.locales[base].algolia)
   )
 
   const enableSmoothScroll = themeConfig.smoothScroll === true
 
   return {
-    alias () {
+    alias() {
       return {
         '@AlgoliaSearchBox': isAlgoliaSearch
           ? path.resolve(__dirname, 'components/AlgoliaSearchBox.vue')

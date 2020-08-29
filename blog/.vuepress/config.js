@@ -4,8 +4,8 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
-      { text: '分类', link: '/categories/' },
-      { text: '标签', link: '/tags/' },
+      { text: '分类', link: '/category/' },
+      { text: '标签', link: '/tag/' },
       {
         text: '语言 / Languages',
         items: [
@@ -28,9 +28,20 @@ module.exports = {
             id: 'post',
             dirname: '_posts',
             path: '/post/',
+            itemPermalink: '/post/:year/:month/:day/:slug',
             pagination: {
               lengthPerPage: 10,
             },
+          },
+        ],
+        frontmatters: [
+          {
+            // Unique ID of current classification
+            id: 'tag',
+            // Decide that the frontmatter keys will be grouped under this classification
+            keys: ['tags'],
+            // Path of the `entry page` (or `list page`)
+            path: '/tag/'
           },
         ],
       },

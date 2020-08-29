@@ -9,50 +9,22 @@
 
     <div class="sidebar-mask" @click="toggleSidebar(false)" />
 
-    <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-      <template #top>
-        <slot name="sidebar-top" />
-      </template>
-      <template #bottom>
-        <slot name="sidebar-bottom" />
-      </template>
-    </Sidebar>
-
-    <Home v-if="$page.frontmatter.home" />
-
-    <Page v-else :sidebar-items="sidebarItems">
-      <template #top>
-        <slot name="page-top" />
-      </template>
-      <template #bottom>
-        <slot name="page-bottom" />
-      </template>
-    </Page>
+    <!-- 输出标签 -->
+    <div class="theme-default-content">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
 <script>
-import Home from "@theme/components/Home.vue";
 import Navbar from "@theme/components/Navbar.vue";
-import Page from "@theme/components/Page.vue";
-import Sidebar from "@theme/components/Sidebar.vue";
-import { resolveSidebarItems } from "../util";
 import "./Element";
 
 export default {
   name: "Layout",
 
   components: {
-    Home,
-    Page,
-    Sidebar,
     Navbar,
-  },
-
-  data() {
-    return {
-      isSidebarOpen: false,
-    };
   },
 
   computed: {
@@ -71,24 +43,6 @@ export default {
       );
     },
 
-    shouldShowSidebar() {
-      const { frontmatter } = this.$page;
-      return (
-        !frontmatter.home &&
-        frontmatter.sidebar !== false &&
-        this.sidebarItems.length
-      );
-    },
-
-    sidebarItems() {
-      return resolveSidebarItems(
-        this.$page,
-        this.$page.regularPath,
-        this.$site,
-        this.$localePath
-      );
-    },
-
     pageClasses() {
       const userPageClass = this.$page.frontmatter.pageClass;
       return [
@@ -99,6 +53,12 @@ export default {
         },
         userPageClass,
       ];
+    },
+
+    getTagList() {
+      return this.$frontmatterKey.list.map(
+        (item) => `${item["name"]} ${item["pages"].length} ${item["path"]}`
+      );
     },
   },
 

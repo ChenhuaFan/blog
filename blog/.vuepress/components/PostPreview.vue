@@ -4,7 +4,9 @@
     <div class="info">
       <p class="displayInline time">{{ formatTime }}</p>
       <ul class="displayInline">
-        <li v-for="tag in tags">🏷 {{ tag }}</li>
+        <li v-for="tag in tags">
+          <el-tag type="info">{{ tag }}</el-tag>
+        </li>
       </ul>
     </div>
   </div>
