@@ -4,11 +4,11 @@
       <el-col
         style="margin: 10px 0;"
         v-for="tag in tags"
-        :xs="24"
-        :sm="12"
-        :md="12"
-        :lg="8"
-        :xl="8"
+        :xs="12"
+        :sm="8"
+        :md="8"
+        :lg="6"
+        :xl="6"
       >
         <Tag :tag="tag" />
       </el-col>
