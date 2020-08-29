@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import "./Element";
 const msgs = [
   `There's nothing here.`,
   `How did we get here?`,

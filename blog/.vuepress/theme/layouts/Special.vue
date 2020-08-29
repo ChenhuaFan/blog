@@ -18,7 +18,6 @@
 
 <script>
 import Navbar from "@theme/components/Navbar.vue";
-import "./Element";
 
 export default {
   name: "Layout",
