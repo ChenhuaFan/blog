@@ -1,6 +1,9 @@
 # mac
 .DS_Store
 
+#firebase
+.firebase
+
 # Logs
 logs
 *.log
