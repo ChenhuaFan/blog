@@ -5,7 +5,7 @@
       <p class="displayInline time">{{ dateFormat("YYYY年mm月dd日", new Date(post.frontmatter.date)) }}</p>
       <ul class="displayInline">
         <li v-for="tag in post.frontmatter.tags">
-          <el-tag type="info">
+          <el-tag type="info" style="margin-bottom: 5px">
             <el-link
               type="info"
               :href="`/tag/${tag}/`"
@@ -53,11 +53,12 @@ export default {
 <style scoped>
 .post-preview {
   width: 100%;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .post-preview > a {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: bolder;
   cursor: pointer;
 }
 

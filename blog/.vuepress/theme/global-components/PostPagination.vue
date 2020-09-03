@@ -9,9 +9,9 @@
       :prePath="$pagination.prevLink"
     />
     <br />
-    <el-card class="box-card">
-      <PostList :posts="$pagination.pages" />
-    </el-card>
+    <!-- <el-card class="box-card"> -->
+    <PostList :posts="$pagination.pages" />
+    <!-- </el-card> -->
     <br />
     <Pagination
       :total="totalPagesLength"
