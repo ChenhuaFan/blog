@@ -168,20 +168,22 @@ console.log(window.a) // undefined
    console.log(fn() === obj); // true 同时 函数体输出 obj
    // 此时更改了 bar ，从对象方法转变成简单调用。此时 this 会与最外层作用域也就是全局作用域保持一致
    var fn2 = obj.bar;
-console.log(fn2()() == window); // true 同时 函数体输出 obj
+   console.log(fn2()() == window); // true 同时 函数体输出 obj
    ```
 
    这是另一个很好的例子，说明箭头函数绑定外层 this。
    
    > 作者：limingru 链接：https://juejin.im/post/5aa1eb056fb9a028b77a66fd 来源：掘金
-   > ```javascript
-   	const obj = {
-      a: function() {
-            console.log(this)
-            window.setTimeout(() => { 
-              console.log(this) 
-            }, 1000)
-      	}
+   > 
+   
+   ```javascript
+   const obj = {
+     a: function() {
+        console.log(this)
+        window.setTimeout(() => { 
+          console.log(this) 
+        }, 1000)
+     }
    }
    obj.a.call(obj)  //第一个this是obj对象，第二个this还是obj对象
    	```
