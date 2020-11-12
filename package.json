@@ -21,6 +21,7 @@
     "vuepress-plugin-mathjax": "^1.2.8"
   },
   "dependencies": {
-    "element-ui": "^2.13.2"
+    "element-ui": "^2.13.2",
+    "vuepress-plugin-comment": "^0.7.3"
   }
 }
