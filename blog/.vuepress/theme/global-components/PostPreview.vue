@@ -5,14 +5,7 @@
       <p class="displayInline time">{{ dateFormat("YYYY年mm月dd日", new Date(post.frontmatter.date)) }}</p>
       <ul class="displayInline">
         <li v-for="tag in post.frontmatter.tags">
-          <el-tag type="info" style="margin-bottom: 5px">
-            <el-link
-              type="info"
-              :href="`/tag/${tag}/`"
-              :underline="false"
-              icon="el-icon-collection-tag"
-            >{{ tag }}</el-link>
-          </el-tag>
+          <RedirectTag :tag="tag"/>
         </li>
       </ul>
     </div>
