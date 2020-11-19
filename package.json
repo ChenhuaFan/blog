@@ -9,7 +9,8 @@
   "scripts": {
     "start": "vuepress dev blog",
     "build": "vuepress build blog",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "post": "node newPost.js"
   },
   "author": "",
   "license": "ISC",
