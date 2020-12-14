@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "element-ui": "^2.13.2",
+    "firebase": "^8.1.2",
     "vuepress-plugin-comment": "^0.7.3"
   }
 }
