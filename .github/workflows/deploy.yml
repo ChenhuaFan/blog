@@ -29,7 +29,7 @@ jobs:
         run: sudo npm install firebase-tools -D
       
       - name: Firebase use
-        run: npx firebase use blog-f1879 --token ${{ secrets.FIREBASE_API_TOKEN }}
+        run: npx firebase use 797229363417 --token ${{ secrets.FIREBASE_API_TOKEN }}
 
       # Runs a single command using the runners shell
       - name: Install Dependences
