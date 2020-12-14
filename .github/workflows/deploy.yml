@@ -27,8 +27,8 @@ jobs:
       
       - name: Install firebase tools
         run: |
-          sudo npm install firebase-tools
-          firebase use blog-f1879 --token $ {{ secrets.FIREBASE_API_TOKEN }}
+          sudo npm install firebase-tools -D
+          npx firebase use blog-f1879 --token $ {{ secrets.FIREBASE_API_TOKEN }}
 
       # Runs a single command using the runners shell
       - name: Build
@@ -38,4 +38,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Deploy
-        run: npm run-script deploy
+        run: npx firebase deploy
