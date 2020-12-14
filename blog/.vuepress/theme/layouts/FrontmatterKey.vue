@@ -3,7 +3,7 @@
     <h1 style="margin-bottom: 2rem">
       <i class="el-icon-collection-tag"></i> 标签
     </h1>
-    <div class="history">
+    <!-- <div class="history">
       <el-tooltip
         v-for="(tag, i) in histories"
         :key="i"
@@ -13,7 +13,7 @@
       >
         <RedirectTag :tag="tag.name || 'tag'" />
       </el-tooltip>
-    </div>
+    </div> -->
     <el-input
       placeholder="筛查标签"
       prefix-icon="el-icon-search"
@@ -28,7 +28,7 @@
 
 <script>
 import TagList from "@theme/components/TagList.vue";
-import { getTagHistoryFromSessionStorage } from "../util";
+// import { getTagHistoryFromSessionStorage } from "../util";
 
 function isMatchQuery(word, query) {
   if (typeof word !== "string" || typeof query !== "string") return false;
@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       search: "",
-      histories: [],
+      // histories: [],
     };
   },
 
@@ -51,7 +51,7 @@ export default {
   },
 
   created() {
-    this.histories = getTagHistoryFromSessionStorage();
+    // this.histories = getTagHistoryFromSessionStorage();
   },
 
   computed: {

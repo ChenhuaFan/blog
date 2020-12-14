@@ -243,22 +243,24 @@ function resolveItem(item, pages, base, groupDepth = 1) {
   }
 }
 
-/**
- * @returns { histories: Array }
- */
-export function getTagHistoryFromSessionStorage() {
-  const histories = sessionStorage.getItem("tagsHistory");
-  if (!histories) return [];
-  return JSON.parse(histories);
-}
+// /**
+//  * @returns { histories: Array }
+//  */
+// export function getTagHistoryFromSessionStorage() {
+//   if (!window.sessionStorage) return;
+//   const histories = window.sessionStorage.getItem("tagsHistory");
+//   if (!histories) return [];
+//   return JSON.parse(histories);
+// }
 
-function hasTag(histories, tag) {
-  return histories.find(his => his.name === tag.name);
-}
+// function hasTag(histories, tag) {
+//   return histories.find(his => his.name === tag.name);
+// }
 
-export function saveTagHistoryToSessionStorage(tag) {
-  let _h = getTagHistoryFromSessionStorage();
-  if (hasTag(_h, tag)) return;
-  _h.push(tag);
-  sessionStorage.setItem("tagsHistory", JSON.stringify(_h));
-}
+// export function saveTagHistoryToSessionStorage(tag) {
+//   if (!window.sessionStorage) return;
+//   let _h = getTagHistoryFromSessionStorage();
+//   if (hasTag(_h, tag)) return;
+//   _h.push(tag);
+//   window.sessionStorage.setItem("tagsHistory", JSON.stringify(_h));
+// }
