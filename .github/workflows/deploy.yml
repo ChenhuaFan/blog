@@ -28,8 +28,8 @@ jobs:
       - name: Install firebase tools
         run: sudo npm install firebase-tools -D
       
-      - name: Firebase use
-        run: npx firebase use 797229363417 --token ${{ secrets.FIREBASE_API_TOKEN }}
+#       - name: Firebase use
+#         run: npx firebase use 797229363417 --token 
 
       # Runs a single command using the runners shell
       - name: Install Dependences
@@ -40,4 +40,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Deploy
-        run: npx firebase deploy
+        run: npx firebase deploy --token '${{ secrets.FIREBASE_API_TOKEN }}' --non-interactive
