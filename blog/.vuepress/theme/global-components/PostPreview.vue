@@ -2,10 +2,12 @@
   <div class="post-preview">
     <a class="title" :href="post.path">{{ post.title }}</a>
     <div class="info">
-      <p class="displayInline time">{{ dateFormat("YYYY年mm月dd日", new Date(post.frontmatter.date)) }}</p>
+      <p class="displayInline time">
+        {{ dateFormat("YYYY年mm月dd日", new Date(post.frontmatter.date)) }}
+      </p>
       <ul class="displayInline">
         <li v-for="tag in post.frontmatter.tags">
-          <RedirectTag :tag="tag"/>
+          <RedirectTag :tag="tag" />
         </li>
       </ul>
     </div>
@@ -46,7 +48,7 @@ export default {
 <style scoped>
 .post-preview {
   width: 100%;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 .post-preview > a {
@@ -56,7 +58,7 @@ export default {
 }
 
 .info {
-  padding: 0.5rem 0;
+  padding: 0;
   font-size: 0.8rem;
 }
 
@@ -65,6 +67,8 @@ export default {
 }
 
 .time {
+  padding: 0;
+  margin: 0;
   color: rgb(179, 179, 179);
 }
 

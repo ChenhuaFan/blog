@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li v-for="post in posts">
+      <li v-for="(post, i) in posts" :key="i">
         <PostPreview :post="post" />
       </li>
     </ul>
@@ -23,6 +23,14 @@ ul {
 }
 
 li {
-  margin: 1rem 0;
+  margin: 2rem 0;
+}
+
+/* li::-moz-list-bullet {
+  color: rgb(179, 179, 179);
+} */
+
+li:first-child {
+  margin: 0;
 }
 </style>

@@ -10,7 +10,7 @@
         :lg="6"
         :xl="6"
       >
-        <Tag :tag="tag" />
+        <slot v-bind="tag"></slot>
       </el-col>
     </el-row>
   </div>

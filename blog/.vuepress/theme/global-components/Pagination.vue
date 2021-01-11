@@ -1,5 +1,6 @@
 <template>
   <el-pagination
+    class="pagination"
     background
     layout="pager"
     :total="total"
@@ -44,4 +45,7 @@ export default {
 </script>
 
 <style scoped>
+.pagination {
+  margin-left: -10px;
+}
 </style>

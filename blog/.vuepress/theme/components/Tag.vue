@@ -2,11 +2,9 @@
   <div>
     <el-card class="box-card" shadow="hover">
       <h4>
-        <a :href="tag['path']" @click="saveHistory">{{ tag["name"] }}</a>
+        <a :href="tag['path']" @click="saveHistory" v-html="tag['name']"></a>
       </h4>
-      <p>
-        <el-tag type="info">{{ tag["pages"] }} 篇</el-tag>
-      </p>
+      <p class="number">{{ tag["pages"] }} 篇</p>
     </el-card>
   </div>
 </template>
@@ -25,4 +23,9 @@ export default {
 </script>
 
 <style scoped>
+.number {
+  font-size: 12px;
+  color: lightgray;
+  font-weight: bolder;
+}
 </style>
