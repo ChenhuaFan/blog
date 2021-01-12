@@ -1,5 +1,5 @@
 module.exports = {
-  title: '范宸华的博客',
+  title: `Hello there!`,
   description: '范宸华的博客',
   themeConfig: {
     nav: [
@@ -39,7 +39,7 @@ module.exports = {
             path: '/post/',
             itemPermalink: '/post/:year/:month/:day/:slug',
             pagination: {
-              lengthPerPage: 10,
+              lengthPerPage: 7,
             },
           },
         ],
@@ -58,7 +58,7 @@ module.exports = {
     [
       'vuepress-plugin-comment',
       {
-        choosen: 'valine', 
+        choosen: 'valine',
         // options选项中的所有参数，会传给Valine的配置
         options: {
           el: '#valine-vuepress-comment',

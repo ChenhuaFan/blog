@@ -1,8 +1,9 @@
 <template>
   <Special>
-    <h1 style="margin-bottom: 2rem">
+    <!-- <h1 style="margin-bottom: 2rem">
       <i class="el-icon-collection-tag"></i> 标签
-    </h1>
+    </h1> -->
+    <CatSay content="标签" />
     <el-input
       placeholder="筛查标签"
       prefix-icon="el-icon-search"
@@ -78,14 +79,17 @@ export default {
 
 <style scoped>
 .tags-wrapper {
-  max-height: calc(100vh - 320px);
+  max-height: calc(100vh - 290px);
   overflow-y: auto;
   overflow-x: hidden;
   margin: 20px 0;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
 }
 
-&::-webkit-scrollbar {
+.tags-wrapper::-webkit-scrollbar {
   width: 0;
+  height: 0;
   display: none;
 }
 
