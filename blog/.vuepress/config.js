@@ -1,6 +1,7 @@
 module.exports = {
   title: `Hello there!`,
   description: '范宸华的博客',
+  base: '/blog/',
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
