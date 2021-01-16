@@ -2,7 +2,11 @@
   <div>
     <el-card class="box-card" shadow="hover">
       <h4>
-        <a :href="tag['path']" @click="saveHistory" v-html="tag['name']"></a>
+        <a
+          :href="'/blog' + tag['path']"
+          @click="saveHistory"
+          v-html="tag['name']"
+        ></a>
       </h4>
       <p class="number">{{ tag["pages"] }} 篇</p>
     </el-card>

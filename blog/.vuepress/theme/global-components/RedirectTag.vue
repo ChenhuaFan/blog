@@ -8,7 +8,7 @@
       >{{ tag }}</el-link
     >
   </el-tag> -->
-  <a class="tag" :href="`/tag/${tag}/`">{{ tag }}</a>
+  <a class="tag" :href="`/blog/tag/${tag}/`">{{ tag }}</a>
 </template>
 
 <script>
