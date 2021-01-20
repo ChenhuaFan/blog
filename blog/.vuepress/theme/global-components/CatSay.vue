@@ -1,7 +1,7 @@
 <template>
   <h1 style="margin-bottom: 2rem;">
     <span class="cat">🐱</span>
-    <span class="buble">"{{ content }}" Here!<span class="arrow"></span></span>
+    <div class="buble">"{{ content }}" Here!<span class="arrow"></span></div>
   </h1>
 </template>
 
