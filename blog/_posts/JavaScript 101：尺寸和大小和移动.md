@@ -27,7 +27,7 @@ tags: ["Javascript","101",'ViewUI']
 
 *为啥没有 clientRight 和 clientBottom 呢*
 
-<JS101PlayGround type="Client" name="Client系是什么（box-sizing 为 border-box）"/>
+<JS101PlayGround type="Client" name="Client系是什么（box-sizing 为 content-box）"/>
 
 ### II. scroll* 
 | 属性名（*Name） | 只读   | 返回值类型 | 描述                                                              |
