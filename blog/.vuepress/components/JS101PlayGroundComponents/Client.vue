@@ -19,11 +19,15 @@
         </div>
       </div>
     </div>
-    <div class="text">border-width: {{ border }}</div>
-    <div class="text">margin: 10</div>
-    <div class="text">padding: 14</div>
-    <div class="text">clientHeight: {{ clientHeight }}</div>
-    <div class="text">clientWidth: {{ clientWidth }}</div>
+    <div class="text icon border-icon">border-width: {{ border }}</div>
+    <div class="text icon margin-icon">margin: 10</div>
+    <div class="text icon padding-icon">padding: 14</div>
+    <div class="text">
+      clientHeight: {{ clientHeight }} = {{ height }} + 14 * 2
+    </div>
+    <div class="text">
+      clientWidth: {{ clientWidth }} = {{ width }} + 14 * 2
+    </div>
     <div class="text">clientTop: {{ clientTop }}</div>
     <div class="text">clientLeft: {{ clientLeft }}</div>
     <hr />
@@ -138,8 +142,26 @@ export default {
   position: relative;
   margin: 10px;
 }
+.icon::before {
+  display: inline-block;
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  border-radius: 4px;
+  border: black 1px solid;
+}
 .border {
   border: slategray solid;
+}
+.border-icon::before {
+  background: slategray;
+}
+.margin-icon::before {
+  background: lightgoldenrodyellow;
+}
+.padding-icon::before {
+  background: lightskyblue;
 }
 .tag {
   position: absolute;

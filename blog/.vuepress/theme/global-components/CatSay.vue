@@ -1,7 +1,7 @@
 <template>
-  <h1 style="margin-bottom: 2rem;">
-    <span class="cat">🐱</span>
-    <div class="buble">"{{ content }}" Here!<span class="arrow"></span></div>
+  <h1 style="margin-bottom: 2rem; display: flex;">
+    <span class="cat moving-cat">🐱</span>
+    <div class="buble">"{{ content }}！"<span class="arrow"></span></div>
   </h1>
 </template>
 
@@ -15,21 +15,19 @@ export default {
 
 <style scoped>
 .cat {
+  position: relative;
 }
 .buble {
-  display: inline-block;
+  width: fit-content;
   background: rgb(102, 51, 153);
   color: white;
-  padding: 10px 20px;
   margin: 0;
   border-radius: 20px;
   position: relative;
-  top: -6px;
   left: 10px;
-  box-sizing: border-box;
-  /* height: 40px; */
-  padding: 10px inherit;
+  padding: 10px 15px;
   font-size: 18px;
+  margin-left: 6px;
 }
 .arrow {
   width: 0;
@@ -44,15 +42,18 @@ export default {
   top: 50%;
   transform: translateY(-50%);
 }
-.move {
-  animation: pops 0.5s ease-in infinite alternate;
+.moving-cat {
+  animation: pops 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) infinite alternate;
 }
 @keyframes pops {
   0% {
-    left: 15px;
+    top: 0;
+  }
+  50% {
+    top: -4px;
   }
   100% {
-    left: 10px;
+    top: 0;
   }
 }
 </style>
