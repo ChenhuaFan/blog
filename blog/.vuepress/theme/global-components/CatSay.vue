@@ -1,10 +1,13 @@
 <template>
   <h1 style="display: flex;">
     <div class="cat"><span class="moving-cat">🐱</span></div>
-    <div class="buble">
-      "{{ content }}"
-      <span class="arrow"></span>
-      <span class="meow">meow！</span>
+    <div>
+      <div class="buble">
+        "{{ content }}"
+        <span class="arrow"></span>
+        <span class="meow">meow！</span>
+      </div>
+      <p class="sub-content" v-if="subText">{{ subText }}</p>
     </div>
   </h1>
 </template>
@@ -13,6 +16,7 @@
 export default {
   props: {
     content: String,
+    subText: String,
   },
 };
 </script>
@@ -34,6 +38,12 @@ export default {
   font-size: 18px;
   margin-left: 6px;
   text-align: left;
+}
+.sub-content {
+  font-size: 12px;
+  margin: 0 16px;
+  text-align: left;
+  color: lightgray;
 }
 .arrow {
   width: 0;
