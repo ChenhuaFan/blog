@@ -1,7 +1,11 @@
 <template>
-  <h1 style="margin-bottom: 2rem; display: flex;">
-    <span class="cat moving-cat">🐱</span>
-    <div class="buble">"{{ content }}！"<span class="arrow"></span></div>
+  <h1 style="display: flex;">
+    <div class="cat"><span class="moving-cat">🐱</span></div>
+    <div class="buble">
+      "{{ content }}"
+      <span class="arrow"></span>
+      <span class="meow">meow！</span>
+    </div>
   </h1>
 </template>
 
@@ -16,6 +20,7 @@ export default {
 <style scoped>
 .cat {
   position: relative;
+  align-items: center;
 }
 .buble {
   width: fit-content;
@@ -28,6 +33,7 @@ export default {
   padding: 10px 15px;
   font-size: 18px;
   margin-left: 6px;
+  text-align: left;
 }
 .arrow {
   width: 0;
@@ -39,10 +45,14 @@ export default {
   line-height: 0;
   position: absolute;
   left: -10px;
-  top: 50%;
+  top: 21px;
   transform: translateY(-50%);
 }
+.meow {
+  color: rgb(117, 73, 161);
+}
 .moving-cat {
+  position: relative;
   animation: pops 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) infinite alternate;
 }
 @keyframes pops {
