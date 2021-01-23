@@ -31,7 +31,7 @@ export default {
   background: rgb(102, 51, 153);
   color: white;
   margin: 0;
-  border-radius: 20px;
+  border-radius: 10px;
   position: relative;
   left: 10px;
   padding: 10px 15px;

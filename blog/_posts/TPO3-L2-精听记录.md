@@ -9,7 +9,7 @@ icon: fa-headphones
 date: 2019-03-15 13:49:49
 ---
 
-<center><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553241193&di=1a2fb8fa95447a3c7c9b1ddfa3f2013e&imgtype=jpg&er=1&src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-93a179d85cf7e286c1930b034357a525_b.jpg" width="200x"/>
+<center><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553241193&di=1a2fb8fa95447a3c7c9b1ddfa3f2013e&imgtype=jpg&er=1&src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-93a179d85cf7e286c1930b034357a525_b.jpg" width="200x"/></center>
 <center>似乎，h 击穿连读还是不太熟悉啊。此外，反意疑问句出现了。</center>
     <center>where 引导的从句也不是很敏感</center>
 
