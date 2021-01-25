@@ -9,3 +9,4 @@ tags: ['css']
 [规范传送门](https://www.w3.org/TR/CSS22/)
 ## Notes
 [Syntax & Basic data types](/post/2021/01/25/css2-2-syntax-basic-data-types/)
+[Selector](/post/2021/01/25/css2-2-selectors/)
