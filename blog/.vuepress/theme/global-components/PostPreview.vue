@@ -1,12 +1,12 @@
 <template>
   <div class="post-preview">
-    <a class="title" :href="'/blog' + post.path">{{ post.title }}</a>
+    <a class="title" :href="post.path">{{ post.title }}</a>
     <div class="info">
       <p class="displayInline time">
         {{ dateFormat("YYYY年mm月dd日", new Date(post.frontmatter.date)) }}
       </p>
       <ul class="displayInline">
-        <li v-for="tag in post.frontmatter.tags">
+        <li v-for="(tag, i) in post.frontmatter.tags" :key="i">
           <RedirectTag :tag="tag" />
         </li>
       </ul>

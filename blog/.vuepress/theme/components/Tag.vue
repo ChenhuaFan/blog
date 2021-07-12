@@ -3,7 +3,7 @@
     <el-card class="box-card" shadow="hover">
       <h4>
         <a
-          :href="'/blog' + tag['path']"
+          :href="tag['path']"
           @click="saveHistory"
           v-html="tag['name']"
         ></a>
