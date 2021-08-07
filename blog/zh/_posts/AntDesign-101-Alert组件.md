@@ -13,11 +13,11 @@ sidebar: true
 
 **[Alert组件文档](https://ant.design/components/alert/)**。Alert 作为一个最简单的组件是一个很好的开始。
 
-<img src="../../public/imgs/image-20200829193751520.png" alt="image-20200829193751520" style="zoom:50%;" />
+<img src="../../imgs/image-20200829193751520.png" alt="image-20200829193751520" style="zoom:50%;" />
 
 ## 1. 项目结构
 
-<img src="../../public/imgs/image-20200829192758244.png" alt="image-20200829192758244" style="zoom:50%;" />
+<img src="../../imgs/image-20200829192758244.png" alt="image-20200829192758244" style="zoom:50%;" />
 
 \_\_tests__：测试相关代码
 
@@ -219,7 +219,7 @@ return closed ? null : (
    />
    ```
    
-   <img src="../../public/imgs/image-20200830090639809.png" alt="image-20200830090639809" style="zoom:50%;" />
+   <img src="../../imgs/image-20200830090639809.png" alt="image-20200830090639809" style="zoom:50%;" />
    
    在这里讨论一下有关于 Alert 组件的几个功能：横幅模式，显示图标，可关闭和关闭信息：
    

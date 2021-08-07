@@ -1,7 +1,7 @@
 <template>
   <div class="playground">
     <div class="fixed-box">
-      <span class="tag">JS 101 游乐场</span><span class="name">{{ name }}</span>
+      <span class="tag">JS 101 Playground</span><span class="name">{{ name }}</span>
     </div>
     <component :is="now" />
   </div>

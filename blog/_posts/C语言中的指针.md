@@ -28,7 +28,7 @@ playlist:
 
 而在这里，我们需要额外注意的是变量名在程序中的作用。
 
-![变量名和地址的关系](../../public/imgs/pointer_of_C/var_name.png)
+![变量名和地址的关系](../imgs/pointer_of_C/var_name.png)
 
 **_如上图所示，变量名只是为了程序员方便地编写程序而存在。实际上，在后续的操作中，编译器会去除所有的变量名而将其替换为内存地址。_**这一点非常重要。
 
@@ -50,7 +50,7 @@ printf("%p", p);
 
 对于上述的程序，我们可以用下图来形象表示它：
 
-![变量名和地址的关系](../../public/imgs/pointer_of_C/var_name_1.png)
+![变量名和地址的关系](../imgs/pointer_of_C/var_name_1.png)
 
 而关于 \* 和 & 会在下面进行讨论。
 
@@ -104,7 +104,7 @@ printf("%p", p);
 
    我们可以用下面这幅图来说明上述例子，请注意内存单元内的数值，这将有助于我们了解内在的工作机制。
 
-   ![变量名和地址的关系](../../public/imgs/pointer_of_C/var_name_2.png)
+   ![变量名和地址的关系](../imgs/pointer_of_C/var_name_2.png)
 
 2. & 取地址符：
 
@@ -113,7 +113,7 @@ printf("%p", p);
 3. 运算优先级：
 
    这是一个很容易忽视的问题，在许多题目中 \* & + 和变量名同时出现，会对我们造成困扰。但如果我们按照规定优先级进行运算，这将不是问题。优先级可以查看下面这张图。
-   ![这是运算优先级](../../public/imgs/pointer_of_C/youxianji.png)
+   ![这是运算优先级](../imgs/pointer_of_C/youxianji.png)
 
    很明显可以发现 _ 和 & 的操作优先级明显高于 +。而 _ & 在一起出现时，也是按照右到左的顺序执行。我们可以举一个简单的例子来说明这个问题.
 
@@ -239,13 +239,13 @@ printf("%p", p);
 
       Int (\*p)[3] 是我们第一次见，此项可以理解为是一个指向**长度为 3 个 int 型的连续空间**的指针。下图可以表示这些关系。
 
-      ![数组的数组名问题](../../public/imgs/pointer_of_C/var_name_3.png)
+      ![数组的数组名问题](../imgs/pointer_of_C/var_name_3.png)
 
       那么，之前我们在程序中发现的异常现象也就解释清楚了。
 
       在这里再贴出一个数组与指针关系的表格。供大家参考：
 
-      ![数组的数组名问题](../../public/imgs/pointer_of_C/arr_name_4.png)
+      ![数组的数组名问题](../imgs/pointer_of_C/arr_name_4.png)
 
       如果读者还有兴趣继续研究，我在这里贴几个网站作为参考。
 
@@ -261,7 +261,7 @@ printf("%p", p);
 
    如下图所示，附图一张供大家参考.
 
-   ![数组的数组名问题](../../public/imgs/pointer_of_C/var_name_5.png)
+   ![数组的数组名问题](../imgs/pointer_of_C/var_name_5.png)
 
 2. 二维数组中需要注意的指针问题。
 
@@ -277,7 +277,7 @@ printf("%p", p);
 
 三维数组即更高维度的数组我们可以通过画图来帮助理解。
 
-![数组的数组名问题](../../public/imgs/pointer_of_C/var_name_6.png)
+![数组的数组名问题](../imgs/pointer_of_C/var_name_6.png)
 
 ```c
 #include <stdio.h>

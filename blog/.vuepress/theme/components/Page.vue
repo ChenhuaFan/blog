@@ -3,7 +3,7 @@
     <slot name="top" />
 
     <div class="theme-default-content" style="text-align: center">
-      <CatSay :content="$page.title" :subText="`已读 于 ${Now} √√`" />
+      <CatSay :content="$page.title" :subText="`Read at ${Now} √√`" />
     </div>
 
     <Content class="theme-default-content" />

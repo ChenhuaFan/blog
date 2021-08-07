@@ -29,7 +29,9 @@ export default {
 
   data() {
     return {
+      lang: 'en',
       search: "",
+      tagList: [],
     };
   },
 
@@ -38,16 +40,24 @@ export default {
     Tag,
   },
 
+  created() {
+    // set language
+    if (this.$route.path.indexOf('zh') >= 0) this.lang = 'zh';
+    //
+    this.removeAllLangMissMatchedPosts(this.$frontmatterKey.list);
+  },
+
   computed: {
     reg() {
       return new RegExp(`${this.search}`, "i");
     },
     filtedTagList() {
       let filtedList = [];
-      const tags = this.$frontmatterKey.list;
-      if (!(tags instanceof Array)) return [];
-      tags.forEach((tag) => {
+      // const tags = this.$frontmatterKey.list;
+      // if (!(tags instanceof Array)) return [];
+      this.tagList.forEach((tag) => {
         const { name, pages, path } = tag;
+        // delete all miss match tags
         if (!this.isMatchQuery(name)) return;
         filtedList.push({
           name,
@@ -73,6 +83,24 @@ export default {
     isMatchQuery(word) {
       return word.search(this.reg) >= 0;
     },
+    removeAllLangMissMatchedPosts(list) {
+      list.forEach(tagItem => {
+        const _tag = {
+          name: tagItem.name,
+          pages: [],
+          path: tagItem.path
+        };
+        tagItem.pages.forEach((post) => {
+          let curLang = post.path.split('/')[1];
+          if (this.lang == 'zh' && curLang == 'zh' ) {
+            _tag.pages.push(post);
+          } else if (this.lang == 'en' && curLang == 'posts') {
+            _tag.pages.push(post);
+          } else {}
+        });
+        if (_tag.pages.length) this.tagList.push(_tag);
+      })
+    }
   },
 };
 </script>

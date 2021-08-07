@@ -42,11 +42,6 @@ export default {
     },
   },
 
-  mounted() {
-    console.log(this.$pagination);
-    console.log(this.$route);
-  },
-
   methods: {
     nextPage() {},
   },

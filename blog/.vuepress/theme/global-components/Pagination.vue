@@ -31,7 +31,6 @@ export default {
       this.$router.push(page);
     },
     clickPageButton(target) {
-      console.log(this.currentIndex, target);
       if (this.currentIndex === target) return;
       let curPath = this.pathArray("page");
       if (target == 1) {

@@ -1,17 +1,25 @@
-# 你好
+# Hello
 
-欢迎来到 [blog.chenhua.fan](/)
+Welcome to [blog.chenhua.fan](/)!
 
-我是 [Sam](https://chenhua.fan)，喜爱前端开发👨‍💻和猫咪🐱。这是我的博客，在过去的 **<Statistic />** 天中，我在这里记录了 **{{ $site.pages.length }}** 篇学习和生活的故事。
+I'm Chenhua Fan, or you can call me [Sam](https://chenhua.fan). I like Front-end development👨‍💻 and kitty🐱. Here is my blog! Welcome, again!
 
-现在，很高兴可以与你一起分享。
+In the past **<Statistic />** days, I've written down **{{ $site.pages.length }}** blogs about my life and work.
 
-### 随便看看 🤞
+Now, I'd like to share with you.
 
-<RandomPost :posts="$site.pages" />
+> ⚠️ I'm working on translating all of my old blogs into English by DeepL translator. Some blogs may be read like written by the machine. Yes, it is. 😄
 
-### 标签 🔢
-通过[标签](/tag/)来检索文章。
+### Translated! 🇺🇸
+
+[Javascript 101: Dimensioning, Sizing, and Moving](/posts/2021/08/07/javascript-101-dimensioning-and-sizing-and-moving/)
+
+[AntDesign 101: Alert component](/posts/2020/08/29/antdesign-101-alert-component/)
+
+[JavaScript 101: Prototype Chain](/posts/2020/06/06/javascript-101-prototype-chain/)
+
+[Algorithm 101: Boyer–Moore majority vote](/posts/2021/05/28/algorithm-101-boyer-moore-majority-vote/)
 
 ### One By One 📕
-浏览[所有](/post/)的文章
+
+[List](/posts/) all of my blogs (including chinese version).
