@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[32],{634:function(n,t,e){"use strict";e.r(t);var s={name:"IndexPost"},a=e(71),o=Object(a.a)(s,(function(){var n=this.$createElement;return(this._self._c||n)("PostPagination")}),[],!1,null,null,null);t.default=o.exports}}]);
