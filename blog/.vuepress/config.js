@@ -24,7 +24,7 @@ module.exports = {
       '/zh/': {
         nav: [
           { text: '主页', link: '/zh/' },
-          { text: '标签', link: '/zh/tag/' },
+          // { text: '标签', link: '/zh/tag/' },
           { text: '全部文章', link: '/zh/posts/' },
           { text: '关于我', link: 'https://chenhua.fan' }
         ]

@@ -10,8 +10,5 @@
 
 <RandomPost :posts="$site.pages" />
 
-### 标签 🔢
-通过[标签](/zh/tag/)来检索文章。
-
 ### One By One 📕
 浏览[所有](/zh/posts/)的文章
